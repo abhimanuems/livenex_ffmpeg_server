@@ -7,10 +7,12 @@ import child_process from "child_process";
 import ffmpeg from "fluent-ffmpeg";
 import ffmpegPath from "ffmpeg-static";
 import { Readable } from 'stream'; 
+import cors from "cors"; 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.join(__dirname, "../.env") });
 const app = express();
+app.use(cors());
 // import ffmpegProcess from "../services/ffmpeg.js"
 const io = new Server(8200);
 // ffmpeg.getAvailableFormats(function (err, formats) {

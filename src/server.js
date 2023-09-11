@@ -13,8 +13,10 @@ const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.join(__dirname, "../.env") });
 const app = express();
 app.use(cors());
+
+
 // import ffmpegProcess from "../services/ffmpeg.js"
-const io = new Server(8200);
+const io = new Server(3000);
 // ffmpeg.getAvailableFormats(function (err, formats) {
 //   console.log("Available formats:");
 //   console.dir(formats);
